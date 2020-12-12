@@ -53,7 +53,7 @@ R1A3 = nakjucni_sprehod_blizine_centralnosti(centerA3[0],A3)
 R1B = nakjucni_sprehod_blizine_centralnosti(centerB[0],B)
 R1C = nakjucni_sprehod_blizine_centralnosti(centerC[0],C)
 R1D = nakjucni_sprehod_blizine_centralnosti(centerD[0],D)
-write_json(2, [R1A1, R1A2, R1A3, R1B, R1, R1D])
+write_json(2, [R1A1, R1A2, R1A3, R1B, R1C, R1D])
 
 #v centralnem vozlišču
 R2A1_100 = nsbc_koncna(A1, centerA1[0], 100)
