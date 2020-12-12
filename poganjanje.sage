@@ -15,9 +15,19 @@ get_ipython().run_line_magic('run', 'popravljeno.ipynb')
 
 import json
 
+def rat2float(s):
+    if isinstance(s, (list, tuple)):
+        return [rat2float(x) for x in s]
+    elif isinstance(s, dict):
+        return {k: rat2float(v) for k, v in s.items()}
+    elif isinstance(s, Rational):
+        return float(s)
+    else:
+        return s
+
 def write_json(i, s):
     with open("sez%d.json" % i, "w") as f:
-        json.dump(s, f)
+        json.dump(rat2float(s), f)
 
 #naredimo matrike
 A1 = mat_2Dmreza(1, 100)
